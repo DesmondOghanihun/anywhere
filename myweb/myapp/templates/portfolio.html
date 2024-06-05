@@ -1,0 +1,43 @@
+<!-- portfolio.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio - UGEGEH DESMOND OGHANIHUN</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'ict_training_request' %}">Training Request</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Portfolio</h1>
+        <p>
+            Here are some of my recent projects:
+        </p>
+        <ul>
+            <li>Project 1: Description of project 1.</li>
+            <li>Project 2: Description of project 2.</li>
+            <li>Project 3: Description of project 3.</li>
+            <!-- Add more projects as needed -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 UGEGEH DESMOND OGHANIHUN</p>
+    </footer>
+</body>
+</html>

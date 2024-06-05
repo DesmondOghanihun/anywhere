@@ -1,0 +1,38 @@
+<!-- portfolio.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUCCESS!</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'ict_training_request' %}">Training Request</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <body>
+            <h1>Success!</h1>
+            <p>Your request has been successfully submitted. You would be contacted.</p>
+            <!-- You can add additional content or redirect links here if needed -->
+        </body>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 UGEGEH DESMOND OGHANIHUN</p>
+    </footer>
+</body>
+</html>

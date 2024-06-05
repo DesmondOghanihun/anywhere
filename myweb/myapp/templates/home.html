@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>UGEGEH DESMOND OGHANIHUN'S PORTFOLIO</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'ict_training_request' %}">Training Request</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="hero flex items-center justify-between">
+            <div class="left flex-1 justify-center">
+                <img src="{% static 'images/profile photo.jpeg' %}" alt="profile" />
+            </div>
+            <div class="right flex-1">
+                <h2>UGEGEH DESMOND OGHANIHUN</h2>
+                <h1>I'm a Data Scientist/Analyst, <br /> 
+                <span>Cybersecurity Specialist,</span><br /> 
+                <span>and Software Developer.</span>
+                </h1>
+                <p>
+                Discover the multifaceted brilliance of Mr. Desmond,<br /> 
+                a polymath excelling as a Data Scientist,<br />  
+                Cybersecurity Specialist, and Software Developer.
+                </p>
+                <div><a href="{% static 'files/Desmond_Oghanihun_CV.pdf' %}" download class="btn btn-secondary">DOWNLOAD CV</a>
+                </div>
+                <div>
+                    <h2>Submit Your Request for ICT Training, Services and Solutions</h2>
+                    <form action="{% url 'submit_form' %}" method="post">
+                        {% csrf_token %}
+                        
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+
+                        <label for="course">Course of Interest:</label>
+                        <input type="text" id="course" name="course" required><br><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <label for="phone">Contact Phone/WhatsApp Number:</label>
+                        <input type="tel" id="phone" name="phone" required><br><br>
+
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" required><br><br>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 UGEGEH DESMOND OGHANIHUN</p>
+    </footer>
+    
+</body>
+</html>

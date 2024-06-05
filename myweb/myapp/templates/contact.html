@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Contact - UGEGEH DESMOND OGHANIHUN</title>
+   
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'ict_training_request' %}">Training Request</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact-section">
+        <h1>Contact Me</h1>
+        <div class="contact-info">
+            <div class="contact-details">
+                <p><strong>Address:</strong>1 Liberation Close, Off Nnebisi Road, Asaba, Delta State.</p>
+                <p><strong>Phone:</strong>+2347062488322</p>
+                <p><strong>Email:</strong> <a href="desmondugegeh@gmail.com">desmondugegeh@gmail.com</a></p>
+            </div>
+            <div class="social-media">
+                <p><strong>Follow me on:</strong></p>
+                <ul>
+                    <li><a href="https://twitter.com/yourhandle" target="_blank">Twitter</a></li>
+                    <li><a href="https://linkedin.com/in/desmond-ugegeh-176a03a0" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/yourhandle" target="_blank">GitHub</a></li>
+                    <li><a href="https://facebook.com/dessyyoung" target="_blank">Facebook</a></li>
+                    <li><a href="https://instagram.com/yourhandle" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <h2>For Enquiries</h2>
+        <form name="contactForm" method="post" action="{% url 'submit_contact' %}">
+
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 UGEGEH DESMOND OGHANIHUN</p>
+    </footer>
+    
+</body>
+</html>
